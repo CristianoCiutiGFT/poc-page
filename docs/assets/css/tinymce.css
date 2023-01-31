@@ -1,0 +1,38 @@
+span.template_variable{
+    color: dimgrey;
+    white-space: nowrap;
+}
+
+span.template_variable[data-vartooltip]{ 
+    position:relative;
+}
+span[data-vartooltip]:before{
+    font-family: helvetica, arial, sans-serif;
+    content: attr(data-vartooltip);
+    position: absolute;
+    top: 104%;
+    width: max-content;
+    background: #f7f7f7;
+    font-size: 11px;
+    font-weight: initial;
+    text-indent: initial !important;
+    color: #5c5c5c;
+    border-radius: 5px;
+    padding: 6px;
+    line-height: 11px;
+    letter-spacing: 0px;
+    z-index: 1050;
+    overflow: hidden;
+    transition: opacity 0.2s ease-out, max-height 0s 0.2s, padding 0s 0.2s, border 0s 0.2s;
+    max-height: 0;
+    padding: 0;
+    border: 0px solid grey;
+    opacity: 0;
+}
+span[data-vartooltip]:hover:before{
+    transition: opacity 0.2s ease-in, max-height 0s 0s, padding 0s 0s, border 0s 0s;
+    max-height: 100px;
+    padding: 6px;
+    border: 1px solid grey;
+    opacity: 0.9;
+}
